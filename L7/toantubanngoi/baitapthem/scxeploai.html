@@ -10,29 +10,23 @@
         var score = parseInt(prompt("Enter value: "));
 
         switch (score) {
-            case score >= 9 && score <= 10 ? score:
-                0:
-                    alert('Xuất sắc');
+            case score <= 10 && score >= 9 ? alert('Xuất sắc'):
+                0: ;
                 break;
-            case score >= 8 && score < 9 ? score:
-                0:
-                    alert('Giỏi');
+            case score < 9 && score >= 8 ? alert('Giỏi'):
+                0: ;
                 break;
-            case score >= 7 && score < 8 ? score:
-                0:
-                    alert('Khá');
+            case score < 8 && score >= 7 ? alert('Khá'):
+                0: ;
                 break;
-            case score >= 5 && score < 7 ? score:
-                0:
-                    alert('Trung bình');
+            case score < 7 && score >= 5 ? alert('Trung bình'):
+                0: ;
                 break;
-            case score < 5 && score > 0 ? score:
-                0:
-                    alert('Yếu');
+            case score < 5 && score >= 0 ? alert('Yếu'):
+                0: ;
                 break;
-            case score > 10 || score < 0 ? score:
-                0:
-                    alert("Điểm bị lỗi");
+            case score > 10 || score < 0 ? alert("Điểm bị lỗi"):
+                0: ;
                 break;
         }
     </script>
