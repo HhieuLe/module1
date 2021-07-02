@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const price = 2000;
+        var time = parseFloat(prompt("Enter time: "));
+        var money
+        if (time < 0) {
+            alert("Error");
+        } else if (time >= 0 && time <= 10) {
+            money = time * price
+            alert("Money to paid: " + money);
+        } else if (time <= 25) {
+            money = time * (price + 500)
+            alert("Money to paid: " + money);
+        } else if (time <= 50) {
+            money = time * (price + 1000);
+            alert("Money to paid: " + money);
+        } else if (time <= 75) {
+            money = time * (price + 1500);
+            alert("Money to paid: " + money);
+        } else if (time > 75) {
+            money = time * (price + 2000);
+            alert("Money to paid: " + money);
+        }
+    </script>
+</body>
+
+</html>

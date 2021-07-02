@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tìm giá trị lớn nhất của ba số nguyên</title>
+</head>
+
+<body>
+    <script>
+        var num1 = parseInt(prompt("Enter a Number 1: "));
+        var num2 = parseInt(prompt("Enter a Number 2: "));
+        var num3 = parseInt(prompt("Enter a Number 3: "));
+        var max = num1;
+
+        if (num1 < num2) {
+            max = num2;
+            if (num1 < num3) {
+                max = num3
+                alert("Giá trị lớn nhất là: " + max);
+            } else {
+                alert("Giá trị lớn nhất là: " + max);
+            }
+
+        } else if (num1 < num3) {
+            max = num3;
+            alert("Giá trị lớn nhất là: " + max);
+        } else {
+            alert("Giá trị lớn nhất là: " + max);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const price = 75000;
+        var amount = parseInt(prompt("Enter amount: "));
+        var revenue = amount * price
+        var commission
+        if (amount < 0) {
+            alert("Error");
+        } else if (amount < 50 && amount > 0) {
+            commission = revenue * 15 / 100;
+            alert("Commision: " + commission);
+        } else if (amount < 100) {
+            commission = revenue * 20 / 100;
+            alert("Commision: " + commission);
+        } else if (amount < 250) {
+            commission = revenue * 25 / 100;
+            alert("Commision: " + commission);
+        } else if (amount < 500) {
+            commission = revenue * 30 / 100;
+            alert("Commision: " + commission);
+        } else if (amount >= 500) {
+            commission = revenue * 35 / 100;
+            alert("Commision: " + commission);
+        }
+    </script>
+</body>
+
+</html>
