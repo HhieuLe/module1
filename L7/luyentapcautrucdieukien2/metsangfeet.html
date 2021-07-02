@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Met sang Feet</title>
+</head>
+
+<body>
+    <table>
+        <form action="">
+            <tr>
+                <td>Meters</td>
+                <td><input type="number" name="meter" id="meter"></td>
+            </tr>
+            <tr>
+                <td>Feet</td>
+                <td><input type="text" name="" id="feet"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Change" name="" id="" onclick="change1()"></td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        function change1() {
+            var number = document.getElementById("meter").value
+            number = number * 3.2808
+            document.getElementById("feet").value = number;
+        }
+    </script>
+</body>
+
+</html>
