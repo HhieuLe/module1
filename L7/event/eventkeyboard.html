@@ -5,7 +5,7 @@
     <title>Nobita</title>
 </head>
 
-<body onload="doReady">
+<body>
     <img src="img/1.png" alt="Nobi Nobita" id="nobita" style="position: absolute;left: 0;top: 0;" height="100" width="80" />
     <script>
         function upArrowPressed() {
@@ -43,9 +43,11 @@
                     downArrowPressed();
                     break;
             }
+            document.getElementsByTagName('body')[0].addEventListener('keydown', moveSelection);
 
             function doReady() {
-                window.addEventListener('keydown', moveSelection);
+
+                window.addEventListener('keydown', moveSelection());
             }
 
         }
