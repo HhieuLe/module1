@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function rightT() {
+            var x = Math.round(Math.random() * window.innerWidth);
+            var x = Math.round(Math.random() * window.innerWidth);
+            document.getElementById("no").style.left = x + 'px';
+            document.getElementById("no").style.top = y + 'px';
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="position:absolute; left:220px; top:175px;">Do you love me?</h1>
+    <input type="button" value=" YES " onclick="alert('ahihi hi hi hi')" style="position:absolute; left:285px; top:235px;" />
+    <input type="button" id="no" value="NO" onmouseover="rightT()" style="position:absolute; left:360px; top:235px;" />
+</body>
+
+</html>
