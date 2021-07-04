@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var personalIncome = parseInt(prompt("Enther the personal income :"));
+
+        if (personalIncome >= 0 && personalIncome <= 5000000) {
+            var personalTax = personalIncome * 5 / 100
+            document.write("Thuế thu nhập cá nhân là: " + personalTax);
+        } else if (personalIncome > 5000000 && personalIncome <= 10000000) {
+            var personalTax = personalIncome * 10 / 100 - 250000
+            document.write("Thuế thu nhập cá nhân là: " + personalTax);
+        } else if (personalIncome > 10000000 && personalIncome <= 18000000) {
+            var personalTax = personalIncome * 15 / 100 - 750000
+            document.write("Thuế thu nhập cá nhân là: " + personalTax);
+        } else if (personalIncome > 18000000 && personalIncome < 32000000) {
+            var personalTax = personalIncome * 20 / 100 - 1650000
+            document.write("Thuế thu nhập cá nhân là: " + personalTax);
+        } else if (personalIncome > 32000000 && personalIncome <= 52000000) {
+            var personalTax = personalIncome * 25 / 100 - 3250000
+            document.write("Thuế thu nhập cá nhân là: " + personalTax);
+        } else if (personalIncome > 52000000 && personalIncome <= 80000000) {
+            var personalTax = personalIncome * 30 / 100 - 5850000
+            document.write("Thuế thu nhập cá nhân là: " + personalTax);
+        } else if (personalIncome > 80000000) {
+            var personalTax = personalIncome * 35 / 100 - 9850000
+            document.write("Thuế thu nhập cá nhân là: " + personalTax);
+        }
+    </script>
+</body>
+
+</html>

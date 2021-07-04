@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lãi suất ngân hàng</title>
+</head>
+
+<body>
+    <table>
+        <form action="">
+            <tr>
+                <td>Tiền vay : </td>
+                <td>Số tháng vay : </td>
+                <td>Lãi suất hàng tháng : </td>
+            </tr>
+            <tr>
+                <td><input type="number" name="firstloan" id="firstloan"></td>
+                <td><input type="number" name="monthloan" id="monthloan"></td>
+                <td><input type="number" name="interestrate" id="interestrate"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="now" value="Change" onclick="change()"></td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        function change() {
+            var floan = parseFloat(document.getElementById("firstloan").value);
+            var mloan = parseFloat(document.getElementById("monthloan").value);
+            var rate = parseFloat(document.getElementById("interestrate").value);
+            for (i = 1; i <= mloan; i++) {
+                floan = floan + (floan * rate)
+            }
+            alert("tiền lãi: " + floan);
+        }
+    </script>
+</body>
+
+</html>
