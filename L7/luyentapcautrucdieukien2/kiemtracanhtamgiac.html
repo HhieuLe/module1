@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt("Enter number a: "));
+        var b = parseInt(prompt("Enter number b:"));
+        var c = parseInt(prompt("Enter number c: "));
+
+        if (a > 0 && b > 0 && c > 0) {
+            if (a + b > c && a + c > b && b + c > a) {
+                alert("Đây là tam giác");
+            } else {
+                alert("Không phải tam giác")
+            }
+        } else {
+            alert("Độ dài không hợp lệ")
+        }
+    </script>
+</body>
+
+</html>
