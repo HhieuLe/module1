@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a = [1, 9, 6, 5, 1, 4, 6, 9]
+        // for (let i = 0; i < a.length; i++) {
+
+        // }
+        // document.write(a)
+        // var size = prompt("Enter size: ");
+        // var a = []
+        // for (let i = 0; i < size; i++) {
+        //     let x = prompt("Enter number: ");
+        //     a.push(x);
+        // }
+        // document.write(a);
+        // var size = prompt("Enter size: ");
+        // var a = []
+        // for (let i = 0; i < size; i++) {
+        //     let x = Math.floor(Math.random() * 11);
+        //     a.push(x)
+        // }
+        // // document.write(a);
+        // var size = 20; // tim tất cả các vị trí của 40 trong mảng
+        // var a = [];
+        // var value = 40;
+        // for (var i = 0; i < size; i++) {
+        //     a[i] = Math.floor(Math.random() * 51);
+        // }
+        // let found = false;
+        // document.write(a);
+        // var index = -1;
+        // var b = [];
+        // for (var j = 0; j <= size; j++) {
+        //     if (a[j] == value) {
+        //         found = true;
+        //         index = j;
+        //         b.push(index);
+        //     }
+        // }
+        // found ? document.write(`<br> có số 40 ở vị trí ${b}`) : document.write(`<br> không có số 40`)
+        var a = new Array(5).fill(new Array(7)) // mang2 chieu ni
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                a[i][j] = Math.floor(Math.random() * 91);
+            }
+        }
+        console.log(a);
+    </script>
+</body>
+
+</html>

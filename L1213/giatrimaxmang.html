@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = [5, 8, 9, 42, 12, 6, 5, 22, 4, 5, 26562998, 198, 1891, 891, 89, 1981, 89, 89, 9888989, 89, 98, 98, 189, 891, 98, 44];
+        var max = x[0];
+        var count = 0
+        for (let i = 0; i < x.length; i++) {
+            if (x[i] > max) {
+                max = x[i];
+                count = i;
+            }
+        }
+        alert(`Giá trị lớn nhất của mảng là : ${max} nằm ở vị trí ${count}`)
+    </script>
+</body>
+
+</html>
