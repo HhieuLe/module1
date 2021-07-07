@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var i = 0
+        var j = 0
+        var number = parseInt(prompt("Enter number: "));
+        for (i; i < number; i++) {
+            for (j; j <= i; j++) {
+                document.write("")
+            }
+            i = 0
+            j = 0
+            var count = 0
+            for (i; i < nunber; i++) {
+                for (j; j <= i; j++) {
+                    if (j < count) {
+                        document.write(`  `);
+                    } else {
+                        document.write("*");
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

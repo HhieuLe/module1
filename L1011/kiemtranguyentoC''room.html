@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <form action="">
+            <tr>
+                <td>Number: </td>
+                <td><input type="number" name="" id="number"></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="" id="" value="Kiểm tra" onclick="test()"></td>
+            </tr>
+            <td><input type="text" id="display" disabled></td>
+            <tr>
+        </form>
+    </table>
+    <script>
+        function test() {
+            let number = parseInt(document.getElementById("number").value);
+            let isPrime = true;
+            for (let i = 2; i < Math.sqrt(number); i++) {
+                if (number % i == 0);
+                isPrime = false;
+                break;
+            }
+            document.getElementById('display').value = isPrime == true && number >= 2 ? `${number} là số nguyên tố` : `${number} không là số nguyên tố`
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //var table = "<table border ='1'>";
+        // for (var i = 1; i <= 9; i++) {
+        // table = table + "<tr>"
+        //for (var j = 2; j <= 9; j++) {
+        //  table = table + "<th>" + j + 'x' + i + '=' + (i * j) + "</th>";
+        //  }
+        // table = table + "</tr>"
+        //  }
+        // table = table + "</table>";
+        //document.write(table);
+        var table = "<table border='1'>";
+        let i = 1;
+        let j = 2;
+        while (i <= 9) {
+            table += "<tr>";
+            j = 2;
+            while (j <= 9) {
+                // if (j % 2 == 0) {
+                //     table += `<th style="background: red"> ${j} x ${i}=${i*j} </th>`;
+                //     j++;
+                // } else {
+                table += `<th style="background-color:${j%2==0?red:green}"> ${j} x ${i}=${i*j} </th>`;
+                j++
+                // }
+            }
+            i++;
+            table = table + "</tr>";
+        }
+        table + "</table>";
+        document.write(table);
+    </script>
+</body>
+
+</html>

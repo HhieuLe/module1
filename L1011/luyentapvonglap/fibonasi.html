@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var count = parseInt(prompt("Enter a number: "));
+        var numb1 = parseInt(prompt("Enter a number 1:"));
+        var numb2 = parseInt(prompt("Enter a number 2: "));
+        var i = 1;
+        var sum = 0
+        while (i <= count) {
+            sum = parseInt(numb1 + numb2);
+            numb1 = numb2;
+            numb2 = sum;
+            i++;
+            document.write(`<br>${numb1} `);
+            if (numb1 % 5 == 0 && numb1 != 0) {
+                document.write(`Là số chia hết cho 5 `);
+            }
+        }
+        document.write(`<br>Tổng 20 số đầu tiên trong dãy fibonasi: ${sum} `);
+    </script>
+</body>
+
+</html>
