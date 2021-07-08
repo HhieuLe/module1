@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        var color = ["Red", "White", "Blue", "Yellow"]
+        document.write(color.toString());
+    </script> -->
+    <!-- <script>
+        var number = [];
+        for (var i = 0; i < 15; i++) {
+            number[i] = Math.floor(Math.random() * 51)
+        }
+        console.log(number);
+        var stri = number.toString()
+        var resutl = []
+        for (var x = 1; x < number.length; x++) {
+            if ((stri[x - 1] % 2 === 0) && (stri[x]) % 2 === 0) {
+                resutl.push("-", stri[x]);
+            } else {
+                resutl.push(stri[x]);
+            }
+        }
+        console.log(resutl.join(""));
+    </script> -->
+    <script>
+        var text = prompt("Enter text: ");
+        var str = [];
+        str = Array.from(text);
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        var resutl = [];
+
+        for (var i = 0; i < str.length; i++) {
+            if (UPPER.indexOf(str[i]) !== -1) {
+                resutl.push(str[i].toLowerCase());
+            } else if (LOWER.indexOf(str[i]) !== 0) {
+                resutl.push((str[i]).toUpperCase());
+            } else {
+                resutl.push(str[i]);
+            }
+        }
+        document.write(resutl.join(''));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <h1>Từ điển :)</h1>
+        <form action="">
+            <tr>
+                <td>Tiếng Anh</td>
+                <td>Tiếng Việt</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id="enter"></td>
+                <td style="height: auto;"><input type="text" name="" id="display" disabled></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Tìm kiếm" name="" id="find" onclick="trans()"></td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        var english = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
+        var vietnamese = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín', 'mười']
+
+        function trans() {
+            var replace = document.getElementById("enter").value
+            for (let i = 0; i < english.length; i++) {
+                if (replace == english[i]) {
+                    for (let j = 0; j < vietnamese.length; j++)
+                        if (i == j) {
+                            replace = vietnamese[j];
+                        }
+                }
+                document.getElementById("display").value = replace
+            }
+        }
+    </script>
+</body>
+
+</html>
