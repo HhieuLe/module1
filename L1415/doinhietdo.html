@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <form action="">
+            <tr>
+                <td>Temperature Converter</td>
+            </tr>
+            <tr>
+                <td>Type a value in the Fahrenhrit field to convert the value to Celcius:</td>
+            </tr>
+            <tr>
+                <td>Fahrenhrit: </td>
+                <td><input type="number" name="" id="value"></td>
+            </tr>
+            <tr>
+                <td>Celcius: </td>
+                <td><input type="text" name="" id="display" disabled></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="" id="" value="Converter" onclick="temp()"></td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        function temp() {
+            var temper = parseFloat(document.getElementById("value").value);
+            var tras = (temper - 32) / 1.8;
+            document.getElementById("display").value = tras;
+        }
+    </script>
+</body>
+
+</html>

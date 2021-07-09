@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>               Bài1
+        var number = [];
+        var size = parseInt(prompt("Enter size: "));
+        var count = 0;
+        var honMuoi = [];
+        for (var i = 0; i < size; i++) {
+            var n = Math.floor(Math.random() * 31)
+            number.push(n);
+            if (number[i] >= 10) {
+                honMuoi.push(number[i]);
+                count++;
+
+            }
+        }
+        document.write(`${number} <br>`);
+        document.write(`Có ${count} số lớn hơn bằng mười là: ${honMuoi}`);
+    </script> -->
+    <!-- <script>               Bài 3
+        var number = [0];
+        var size = 10;
+        var count = 1;
+        var max = number[0];
+        for (var i = 0; i < size; i++) {
+            var n = Math.floor(Math.random() * 31);
+            number.push(n);
+
+            if (number[i] > max) {
+                var max = number[0];
+                max = number[i]
+                count++
+            }
+        }
+        document.write(`${number} <br>`);
+        document.write(`Số lớn nhất của mảng là ${max} nằm ở vị trí ${count}`);
+    </script> -->
+    <!-- <script>               Bài 3
+        var number = [];
+        var size = prompt("Enter size: ");
+        var sum = 0;
+        for (var i = 0; i < size; i++) {
+            var n = Math.floor(Math.random() * 100);
+            number.push(n);
+            sum += number[i];
+        }
+        var avg = sum / size;
+        document.write(number);
+        document.write('<br>')
+        document.write(avg);
+    </script> -->
+    <!-- <script>               Bài 4
+        var arr = ['BMW', 'Ferrari', 'Volkswagen', 'Mazda', 'Bugatti', 'Audi', 'Mercedes Benz', 'Lamborghini', 'Aston Martin', 'Chevrolet', 'Lexus', 'Peugeot', 'Porsche', 'Land Rover', 'Subaru', 'Volvo', 'Bentley', 'Maybach', 'McLaren', 'Tesla']
+        arr.reverse().join('')
+        document.write(arr);
+    </script> -->
+    <!-- <script>               Bài 5
+        var number = [];
+        var size = prompt("Enter size: ");
+        var count = 0;
+        for (var i = 0; i < size; i++) {
+            var n = Math.floor(Math.random() * (90 - (-90) + 1) + (-90));
+            number.push(n);
+            if (number[i] < 0) {
+                count++
+            }
+
+        }
+        document.write(number)
+        document.write('<br>')
+        document.write("Có" + count + " sô nguyên âm");
+    </script> -->
+    <!-- <script>               Bài 6
+        var number = [];
+        var size = prompt("enter size: ");
+        var v = prompt("enter number v: ");
+        var kiemtra = false;
+        for (var i = 0; i < size; i++) {
+            var n = Math.floor(Math.random() * (90 - (-90) + 1)) + (-90);
+            number.push(n);
+            if (number[i] == v) {
+                kiemtra = true
+            }
+        }
+
+        kiemtra ? alert("V is in the array") : alert("V is not in the array");
+    </script> -->
+    <!-- <script>               Bài 8
+        var number = [];
+        var size = prompt("enter size: ");
+        for (var i = 0; i < size; i++) {
+            var n = Math.floor(Math.random() * (90 - (-90) + 1)) + (-90);
+            number.push(n);
+        }
+        //document.write(number);
+        number.sort(function(a, b) {
+            return a - b
+        });
+        document.write(number);
+    </script> -->
+    <script>
+        //Bài 9
+        var a = ['Buggati']
+        var b = ['Ferrari', 'Volkswagen', 'Mazda', 'Audi', 'Mercedes Benz', 'Lamborghini', 'Aston Martin', 'Chevrolet', 'Lexus', 'Peugeot', 'Porsche', 'Land Rover', 'Subaru']
+        var c = a.concat(b)
+        document.write(c);
+    </script>
+</body>
+
+</html>

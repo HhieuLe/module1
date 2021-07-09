@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><input type="radio" name="dv" id="" onclick="meterToFeet()">Meter</td>
+
+        </tr>
+        <tr>
+            <td><input type="radio" name="dv" id="" onclick="feetToMeter()">Feet</td>
+        </tr>
+        <tr>
+            <td><input type="number" name="" id="enter"></i>
+            </td>
+            <td><input type="text" id="display" disabled></td>
+
+        </tr>
+    </table>
+    <script>
+        function feetToMeter() {
+            let feet = parseFloat(document.getElementById("enter").value);
+            let change = 0.305 * feet;
+            document.getElementById("display").value = change;
+        }
+
+        function meterToFeet() {
+            let meter = parseFloat(document.getElementById("enter").value);
+            let change = 3.279 * meter;
+            document.getElementById("display").value = change;
+        }
+    </script>
+</body>
+
+</html>

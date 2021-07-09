@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr1 = [3, 5, 1, 8, -3, 7, 8];
+        // var arr2 = [7, 12, 6, 9, 20, 56, 89];
+        // var arr3 = [];
+        // var arr4 = [0, 0, 0, 0, 0, 0];
+
+        function findMin(arr) {
+            let min = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        var min1 = findMin(arr1);
+        document.write(min1 + "<br>");
+        // let min2 = findMin(arr2);
+        // document.write(min2 + "<br>")
+        // let min3 = findMin(arr3);
+        // document.write(min2 + "<br>")
+        // let min4 = findMin(arr4);
+        // document.write(min4 + "<br>")
+    </script>
+</body>
+
+</html>
