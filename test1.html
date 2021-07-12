@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section {
+            height: 100vh;
+        }
+        
+        text {
+            width: 400px;
+            height: 25px;
+        }
+        
+        td,
+        tr {
+            width: 400px;
+            height: 30px
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Add New Product</h2>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="txt" style="width: 400px;height: 25px;" placeholder="Mặt hàng cần thêm">
+            </td>
+            <td>
+                <input type="button" name="Add" id="btn" style="width: 100px; height: 30px; background-color: green;" value="Add" onclick="them()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="txtSua" style="width: 400px; height: 25px;" placeholder="Mặt hàng cần sửa">
+            </td>
+            <td>
+                <input type="button" name="Edit" id="btn" style="width: 100px; height: 30px; background-color: green;" value="Edit" onclick="sua()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="txtXoa" style="width: 400px; height: 25px;" placeholder="Mặt hàng cần xóa">
+            </td>
+            <td>
+                <input type="button" name="Delete" id="btn" style="width: 100px; height: 30px; background-color: green;" value="Delete" onclick="xoa()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" name="Display" id="btn" style="width: 100px; height: 30px; background-color: green;" value="Display" onclick="hienthi()">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <h2>Display All Product</h2>
+    <div id="result"></div>
+    <p id="table1">
+    </p>
+    <br>
+    <script>
+        let item = ['IphoneX', 'Blackshark 4', 'Rog Phone 3', 'Sony Xperia', 'POCO X3 pro'];
+        var data = "";
+        var button1 = `<td>
+                <input type="button" name="Edit" id="btnEdit" style="width: 100px; height: 30px; background-color: green;"
+                    value="Edit" onclick="sua()">
+            </td>
+            <td>
+                <input type="button" name="Delete" id="btnDelete" style="width: 100px; height: 30px; background-color: green;"
+                    value="Delete" onclick="xoa1()">
+            </td>`;
+        for (let i = 0; i < 5; i++) {
+            data += item[i];
+        }
+
+        function hienthi() {
+            data = `<table>`;
+            for (let i = 0; i < item.length; i++) {
+                data = data + `<tr>
+                    <td style="width: 400px; height: 25px;" id="id${i}"> 
+                        ${item[i]} 
+                    </td> ${button1}`;
+            }
+            data = data + `</table>`;
+            document.getElementById('result').innerHTML = data;
+        }
+
+        function them() {
+            let add = document.getElementById('txt').value;
+            item.push(add);
+            alert("Đã thêm!")
+        }
+
+        function xoa() {
+            var rmv = document.getElementById("txtXoa").value;
+            for (let i = 0; i < item.length; i++) {
+                if (rmv == item[i]) {
+                    item.splice(i, 1);
+                    alert("Da xoa!");
+                }
+            }
+        }
+
+        function xoa1() {
+            var rmv = document.getElementById("txtXoa").value;
+            for (let i = 0; i < item.length; i++) {
+                if (rmv == item[i]) {
+                    item.splice(i, 1);
+                    alert("Da xoa!");
+                }
+            }
+        }
+
+        function sua() {
+            let edit1 = document.getElementById('txtSua').value;
+            let edit2 = prompt("Nhập vào thông tin thay thế: ");
+            for (let i = 0; i < item.length; i++) {
+                if (edit1 == item[i]) {
+                    item[i] = edit2;
+                    alert("Đã sửa!");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

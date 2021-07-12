@@ -25,7 +25,8 @@
 
         } 
      </script> -->
-    <!-- <script>                                                                                   Bài 3 
+    <!-- <script>
+        Bài 3
         var a = parseInt(prompt("Enter a: "));
         var b = parseInt(prompt("Enter b: "));
         var c = lalala(a, b);
@@ -65,18 +66,30 @@
             <td><input type="text" id="display" disabled></td>
         </tr>
         <tr>
-            <td><input type="button" value="Change"></td>
+            <td><input type="button" value="Change" onclick="trans()"></td>
         </tr>
     </table>
     <script>
         var a = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
         var b = ["Ursa", "Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        var replace;
+        var tf = false;
 
-        function find() {
-            replace = document.getElementById("enter").value;
-            a.forEach(myFunction(value, index, array {
-
-                    })
+        function trans() {
+            var replace = document.getElementById("enter").value
+            for (let i = 0; i < a.length; i++) {
+                if (replace === a[i]) {
+                    tf = true;
+                    for (let j = 0; j < b.length; j++)
+                        if (i == j) {
+                            replace = b[j];
+                        }
+                }
+            }
+            tf == true ?
+                document.getElementById("display").value = replace :
+                document.getElementById("display").value = "Không có dữ liệu này"
+        }
     </script>
 </body>
 
