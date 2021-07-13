@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>                                                Bài 1
+        function binhphuong(a) {
+            a = a * a;
+            return a;
+        }
+        var b = binhphuong(3)
+        document.write(b); 
+     </script>-->
+    <!-- <script>                                                       Bài 2
+        var r = parseFloat;
+        var s = 0;
+        var p = 0;
+
+        function chuViTron(r) {
+            p = r * 2 * 3.1415
+            return p;
+        }
+
+        function dienTichTron(r) {
+            s = r * r * 3.1415;
+            return s;
+        }
+        document.write(chuViTron(10));
+        document.write("<br>");
+        document.write(dienTichTron(10));
+    </script> -->
+    <!-- <script>               Bài 3 
+        var a = parseFloat(prompt("Enter number a: "));
+        var t = 1;
+        t = giaThua(a);
+        document.write(t);
+
+        function giaThua() {
+            for (let i = 1; i <= a; i++) {
+                t = t * i;
+            }
+            return t;
+        }
+    </script> -->
+    <!-- <script>                   Bài 4
+        var a = prompt("Enter a number: ");
+        kiemTra(a);
+
+        function kiemTra() {
+            if (a == "0") {
+                alert("True")
+            } else {
+                alert("False")
+            }
+        }
+    </script> -->
+    <!-- <script>                                               Bài 5
+        var a = parseInt(prompt("Enter number a: "));
+        var b = parseInt(prompt("Enter number b: "));
+        var c = parseInt(prompt("Enter number c: "));
+
+        function timMin() {
+            var min = 0;
+            (a < b && a < c) ? min = a: (b < c ? min = b : min = c);
+            console.log(min);
+        }
+        timMin();
+    </script> -->
+    <!-- <script>                                   Bài 6
+        var a = parseInt(prompt("enter a number: "));
+        kiemtra(a);
+
+        function kiemtra() {
+            if (a > 0) {
+                alert("True");
+            } else {
+                alert("False");
+            }
+        }
+    </script> -->
+    <!-- <script>                       Bìa 7
+        var a = parseInt(prompt("Enter a number: "));
+        var b = parseInt(prompt("Enter a number: "));
+        var tmp = 0
+        doiCho(a, b);
+        document.write(a);
+        document.write("<br>");
+        document.write(b);
+
+        function doiCho() {
+            temp = a;
+            a = b;
+            b = temp;
+        }
+    </script> -->
+    <!-- <script>                       Bài 8
+        var number = [];
+        var size = prompt("Nhập size: ");
+        for (let i = 0; i < size; i++) {
+            let n = Math.floor(Math.random() * (90 - (-90) + 1) + (-90));
+            number.push(n);
+        }
+        document.write(number);
+        document.write("<br>")
+        daoNguoc(number);
+        document.write(number);
+
+        function daoNguoc() {
+            number.reverse().join("");
+        }
+    </script> -->
+    <script>
+        let array = [addArray()];
+
+        function addArray() {
+            let n = prompt('Nhập chiều dài của mảng:');
+            let arr = [];
+            for (let i = 0; i < n; i++) {
+                let char = prompt('nhap gia tri mang :');
+                arr.push(char);
+            }
+            document.write(arr)
+            document.write("<br>");
+            let value = prompt('nhap gia tri can tim :')
+            let round = false;
+            let dem = 0;
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[j] == value) {
+                    round = true;
+                    dem++;
+                }
+            }
+            if (round) {
+                document.write(' so ' + value + ' xuat hien ' + dem);
+            } else {
+                document.write('trong mang khong co gia tri ' + value);
+            }
+        }
+    </script>
+</body>
+
+</html>

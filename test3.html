@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+</html>
+<script>
+    let array = [addArray()];
+
+    function addArray() {
+        let n = prompt('chieu dai mang:');
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            let number = prompt('nhap gia tri mang:');
+            arr.push(number);
+        }
+        document.write(arr)
+        let value = prompt('nhap gia tri can tim:')
+        let round = false;
+        let dem = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] == value) {
+                round = true;
+                dem++;
+            }
+        }
+        if (round) {
+            document.write(' so ' + value + ' xuat hien' + dem);
+        } else {
+            document.write('trong mang khong co gia tri ' + value);
+        }
+    }
+</script>
+</body>
