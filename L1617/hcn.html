@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border: 1 solid #d3d3d3 ;"></canvas>;
+    <script>
+        let Rectangle = function(widths, lengths) {
+            this.lengths = lengths;
+            this.width = widths;
+
+            this.getArea = function() {
+                return lengths * widths;
+            }
+
+            this.getPerimeter = function() {
+                return (lengths + widths) * 2;
+            }
+
+            function paint() {
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.rect(20, 20, 100, 150);
+                ctx.stroke();
+            }
+        }
+
+        let chunhat = new Rectangle(100, 150);
+        let area = chunhat.getArea();
+        let perimeter = chunhat.getPerimeter();
+        document.write(`S = ${area}`);
+        document.write("<br>");
+        document.write(`P = ${perimeter}`);
+        //paint();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myDate = function(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+
+            this.getDay = function() {
+                return this.day;
+            }
+            this.getMonth = function() {
+                return this.month;
+            }
+            this.getYear = function() {
+                return this.year;
+            }
+            this.setDay = function(day) {
+                this.day = day;
+            }
+            this.setMonth = function(moth) {
+                this.month = month;
+            }
+            this.setYear = function(year) {
+                this.year = year;
+            }
+            this.getDayMonthYear = function() {
+                return `${this.day}/${this.month}/${this.year}`;
+            }
+        }
+        let date = new myDate(05, 12, 1999);
+        let day = date.getDay();
+        let month = date.getMonth();
+        let year = date.getYear();
+        document.write(`${day}/${month}/${year}`);
+        document.write("<br>");
+        document.write("<br>");
+
+        date = new myDate(30, 07, 1999);
+        day = date.getDay();
+        month = date.getMonth();
+        year = date.getYear();
+        document.write(`${day}/${month}/${year}`);
+        document.write("<br>");
+        document.write("<br>");
+        document.write(date.getDayMonthYear());
+    </script>
+</body>
+
+
+</html>

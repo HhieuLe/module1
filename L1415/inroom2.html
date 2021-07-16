@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        //var number = addNumber(10, 10, 90);
+        var number1 = addNumber();
+        //document.write(number);
+        document.write("<br>");
+        document.write(number1);
+
+        function addNumber(size, max, min) {
+            var arr = [];
+            size = parseInt(prompt("Enter size: "))
+            min = parseInt(prompt("enter min"));
+            max = parseInt(prompt("ENTER MAX"))
+            for (let i = 1; i < size; i++) {
+                var n = Math.floor(Math.random() * (max - min + 1) + min);
+                arr.push(n);
+            }
+            return arr;
+        }
+    </script> -->
+    <script>
+        //var n1 = prompt("Enter number n1: ");
+        //var n2 = prompt("Enter number n2: ");
+        //swap();
+        swap(5, 7);
+        // document.write(`gia tri n1: ${n1}`);
+        // document.write(`gia tri n2: ${n2}`);
+
+        function swap(n1, n2) {
+            let temp = n1;
+            n1 = n2;
+            n2 = temp;
+            document.write(`gia tri n1: ${n1}`);
+            document.write(`gia tri n2: ${n2}`);
+        }
+    </script>
+</body>
+
+</html>

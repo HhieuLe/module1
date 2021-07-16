@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let size = parseInt(prompt("Enter size: "));
+        let matran1 = [];
+        for (let i = 0; i < size; i++) {
+            let arr = [];
+            for (let j = 0; j < size; j++) {
+                arr[j] = Math.floor(Math.random() * 81 + 10);
+            }
+            matran1[i] = arr;
+        }
+        for (let f = 0; f < size; f++) {
+            for (let h = 0; h < size; h++) {
+                document.write(matran1[f][h] + "&nbsp");
+            }
+            document.write("</br>");
+        }
+        document.write("---------------------");
+        document.write("<br>");
+        let matran2 = []
+        for (let i = 0; i < size; i++) {
+            let arr = [];
+            for (let j = 0; j < size; j++) {
+                arr[j] = Math.floor(Math.random() * 31 + 10);
+            }
+            matran2[i] = arr;
+        }
+        for (let f = 0; f < size; f++) {
+            for (let h = 0; h < size; h++) {
+                document.write(matran2[f][h] + "&nbsp");
+            }
+            document.write("</br>");
+        }
+        document.write("---------------------");
+        document.write("<br>");
+
+        function tongMang() {
+
+        }
+    </script>
+</body>
+
+</html>

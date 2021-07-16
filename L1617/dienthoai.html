@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Mobile = function(id, name) {
+            this.id = id;
+            this.name = name;
+            this.battery;
+            this.hopthuden = [];
+            this.tindagui = [];
+
+            this.setBattery = function(battery) {
+                if (battery > 0 && battery <= 100) {
+                    this.battery = battery;
+                } else {
+                    throw `invalid Value ${battery}`;
+                }
+            }
+            this.getBattery = function() {
+                return this.battery;
+            }
+            this.setTinNhanDen = function(tinnhan) {
+                this.hopthuden.push(tinnhan)
+            }
+            this.getTinNhanDen = function() {
+                return this.hopthuden;
+            }
+            this.getThuDaGui = function() {
+                return this.tindagui;
+            }
+            this.guiTinNhan = function(tinnhan, mobile) {
+                mobile.setTinNhanDen(tinnhan);
+                this.tindagui.push(tinnhan);
+                return this.battery--;
+            }
+            this.sacPin = function() {
+                return this.battery++;
+            }
+        }
+        let nokia = new Mobile(1, "Nokia");
+        let samsung = new Mobile(2, "Samsung");
+        let rog = new Mobile(3, "Rog Phone 5");
+        let black = new Mobile(4, "Black Shark 4");
+    </script>
+</body>
+
+</html>

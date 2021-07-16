@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var size = parseInt(prompt("Nhập kích cỡ ma trận: "));
+        let matran = [];
+        taoMang();
+
+        function taoMang() {
+            for (let i = 0; i < size; i++) {
+                let arr = [];
+                for (let j = 0; j < size; j++) {
+                    arr[j] = Math.floor(Math.random() * 81 + 10);
+                }
+                matran[i] = arr;
+            }
+            for (let f = 0; f < size; f++) {
+                for (let h = 0; h < size; h++) {
+                    document.write(matran[f][h] + "&nbsp");
+                }
+                document.write("</br>");
+            }
+            return matran;
+        }
+
+        function tongChan() {
+            var tongChan = 0;
+            for (let f = 0; f < size; f++) {
+                for (let h = 0; h < size; h++) {
+                    if (matran[f][h] % 2 == 0) {
+                        tongChan += matran[f][h];
+                    }
+                }
+            }
+            return tongChan
+        }
+        // tính tổng đường chéo chính
+        function tongCheoChinh() {
+            var tongCheoChinh = 0;
+            for (let f = 0; f < size; f++) {
+                for (let h = 0; h < size; h++) {
+                    if (f == h) {
+                        tongCheoChinh += matran[f][h];
+                    }
+                }
+            }
+            return tongCheoChinh;
+        }
+        // tính tổng chéo phụ
+        function tongCheoPhu() {
+            var tongCheoPhu = 0
+            for (let f = 0; f < size; f++) {
+                for (let h = 0; h < size; h++) {
+                    if (f == size - h) {
+                        tongCheoPhu += matran[f][h];
+                    }
+                }
+            }
+            return tongCheoPhu;
+        }
+
+        function tamGiacDuoi() {
+            //Hiển thị ma trân tam giác dưới
+            for (let m = 0; m < size; m++) {
+                for (let n = 0; n <= m; n++) {
+                    document.write(matran[m][n] + "&nbsp")
+                }
+                document.write("<br/>")
+            }
+            document.write("------------------------------------")
+            document.write("<br/>");
+        }
+
+        function tamGiacTren() {
+            //Hiển thị ma trận tam giác trên
+            for (let a = 0; a < size; a++) {
+                for (let b = 0; b <= a; b++) {
+                    document.write(matran[a][b] + "&nbsp")
+                }
+                document.write("<br/>")
+            }
+            document.write("------------------------------------")
+            document.write("<br/>");
+        }
+
+        //tổng đường biên
+        function tongDuongBien() {
+            //     var tongDuongBien = 0;
+            //     var tongCot = 0;
+            //     var tongHang = 0;
+            var tongGiaTriTrung = 0
+                //     for (let h = 0; h < size; h++) {
+                //         tongHang += matran[0][h];
+                //         tongHang += matran[size - 1][h];
+                //     }
+                //     for (let f = 0; f < size; f++) {
+                //         tongCot += matran[f][0]
+                //         tongCot += matran[f][size - 1];
+                //     }
+            let size = matran.length
+            for (let f = 0; f < size; f++) {
+                for (let h = 0; h < size; h++) {
+                    if (f == 0 && h == 0 | f == 0 && h == size - 1 | f == size - 1 && h == 0 | f == size - 1 && h == size - 1) {
+                        tongGiaTriTrung += matran[f][h];
+                    }
+                }
+            }
+            document.write(tongGiaTriTrung);
+        }
+
+
+
+
+        document.write("<br>");
+        document.write(`Tổng số chẵn trong ma trận: ${tongChan()}`);
+        document.write(`<br>`);
+        document.write(`Tổng đường chéo chính ma trận: ${tongCheoChinh()}`);
+        document.write(`<br>`);
+        document.write(`Tổng đường chéo phụ của ma trận: ${tongCheoPhu()}`);
+        document.write(`<br>`);
+        document.write(` Tổng biên: ${tongDuongBien()}`);
+        document.write("<br>")
+        tamGiacDuoi();
+        tamGiacTren();
+    </script>
+</body>
+
+</html>

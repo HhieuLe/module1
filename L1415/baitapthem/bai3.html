@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let matran = [];
+        var n = parseInt(prompt("enter hàng: "));
+        var m = parseInt(prompt("enter cột: "));
+
+        for (let i = 0; i < n; i++) {
+            let arr = [];
+            for (let j = 0; j < m; j++) {
+                arr[j] = Math.floor(Math.random() * 81 + 10);
+            }
+            matran[i] = arr;
+        }
+        for (let f = 0; f < n; f++) {
+            for (let h = 0; h < m; h++) {
+                document.write(matran1[f][h] + "&nbsp");
+            }
+            document.write("</br>");
+        }
+    </script>
+</body>
+
+</html>

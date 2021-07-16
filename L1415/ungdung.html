@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Add New Product</h2>
+    <table>
+        <tr>
+            <td><input type="text" id="enter" placeholder="New product" style="width: 400px;height: 25px;"></td>
+            <td><input type="button" style="background-color: greenyellow; width: 100px;height: 30px;" value="Add" onclick="them()"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="delete" placeholder="Delete product" style="height: 25px;width: 400px;"></td>
+            <td><input type="button" style="background-color: hotpink; width: 100px;height: 30px;" value="Delete" onclick="xoa()
+                f"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Display" style="background-color: indigo;" onclick="hienthi()"></td>
+        </tr>
+    </table>
+    <h2>Display All Product</h2>
+    <div id="result"></div>
+    <p id="table1">
+    </p>
+    <br>
+    <script>
+        var productList = [];
+        var data = "";
+
+        function hienthi() {
+            data = `<table>`;
+            for (let i = 0; i < productList.length; i++) {
+                data = data + `<tr>
+                    <td style="width: 400px; height: 25px;" id="id${i}"> 
+                        ${productList[i]} 
+                    </td> `;
+            }
+            data = data + `</table>`;
+            document.getElementById('result').innerHTML = data;
+        }
+
+        function them() {
+            var addd = document.getElementById("enter").value;
+            productList.push(addd);
+            alert("Đã thêm")
+            console.log(productList);
+        }
+
+        function xoa() {
+            var delet = document.getElementById("delete").value;
+            for (let i = 0; i < productList.length; i++) {
+                if (delet == productList[i]) {
+                    productList.splice(delet, 1);
+                    alert("Đã xóa")
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
