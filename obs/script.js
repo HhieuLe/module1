@@ -16,37 +16,37 @@ function Hero(image, top, left, size) {
     }
 
     this.moveRight = function() {
-        this.left += 40;
+        this.left += 20;
         console.log('ok: ' + this.left);
     }
     this.moveDown = function() {
-        this.top += 40;
+        this.top += 20;
         console.log('ok:' + this.top);
     }
     this.moveLeft = function() {
-        this.left -= 40;
+        this.left -= 20;
         console.log('ok: ' + this.left);
     }
     this.moveUp = function() {
-        this.top -= 40;
+        this.top -= 0;
         console.log('ok: ' + this.top);
     }
 }
 
-var paimon = new Hero('pikachu1.png', 20, 30, 200);
+var luffy = new Hero('pikachu1.png', 20, 30, 200);
 
 function start() {
-    if (paimon.left < window.innerWidth - paimon.size && paimon.top == 20) {
-        paimon.moveRight();
-    } else if (paimon.left > window.innerWidth - paimon.size && window.innerHeight - paimon.size > paimon.top) {
-        paimon.moveDown();
-    } else if (window.innerHeight - paimon.size < paimon.top) {
-        paimon.moveLeft();
+    if (luffy.left < window.innerWidth - luffy.size && luffy.top == 20) {
+        luffy.moveRight();
+    } else if (luffy.left > window.innerWidth - luffy.size && window.innerHeight - luffy.size > luffy.top) {
+        luffy.moveDown();
+    } else if (window.innerHeight - luffy.size < luffy.top) {
+        luffy.moveLeft();
     }
-    if (paimon.left === 0) {
-        paimon.moveUp();
+    if (luffy.left <= 0) {
+        luffy.moveUp();
     }
-    document.getElementById('game').innerHTML = paimon.getHeroElement();
+    document.getElementById('game').innerHTML = luffy.getHeroElement();
     setTimeout(start, 300)
 }
 
