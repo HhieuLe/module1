@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Rat {
+            constructor(name, weight, speed, status) {
+                this.name = name;
+                this.weight = weight;
+                this.speed = speed;
+                this.status = status;
+                this.biBat = false;
+            }
+            getWeight() {
+                return this.weight;
+            }
+
+            getSpeed() {
+                return this.speed;
+            }
+
+            getStatus() {
+                return this.status;
+            }
+
+            ratTalk() {
+                return alert("Chít chít");
+            }
+            getBiBat() {
+                return this.biBat;
+            }
+        }
+        class Cat {
+            constructor(name, weight, maxSpeed) {
+                this.name = name;
+                this.weight = weight;
+                this.maxspeed = maxSpeed;
+                this.catch = false;
+
+            }
+            catTalk() {
+                return alert("meow miao");
+            }
+            getWeight() {
+                return this.weight;
+            }
+            getMaxSpeed() {
+                return this.maxspeed;
+            }
+            getCatch() {
+                return this.catch;
+            }
+            catchRat(rat) {
+                if (rat.getStatus() == "alive" && this.getMaxSpeed() > rat.getSpeed()) {
+                    document.write("bắt được chuột rồi :)");
+                    return this.catch = true;
+                    return rat.biBat = true;
+                } else if (rat.getStatus() == "alive" && this.getMaxSpeed() < rat.getSpeed()) {
+                    document.write("Không bắt được rồi");
+                } else if (rat.getStatus() == "dead") {
+                    document.write("Chuột chết rồi");
+                }
+            }
+            eatRat(rat) {
+                if (this.getCatch == true) { //&& rat.getBiBat() == true) {
+                    document.write("Đã ăn chuột");
+                    return this.weight += rat.getWeight();
+                    //} else if (rat.getBiBat() == false) {
+                    // document.write("Có gì đâu mà ăn ???");
+                }
+            }
+
+        }
+        let tom = new Cat("Tom", 10, 20);
+        let rat1 = new Rat("Ratt", 4, 10, "alive");
+        let rat2 = new Rat("Razz", 5, 25, "alive");
+        let rat3 = new Rat("Rauu", 10, 5, "dead");
+    </script>
+</body>
+
+</html>
